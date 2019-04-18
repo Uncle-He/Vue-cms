@@ -21,6 +21,7 @@ module.exports = {
       { test: /\.vue$/, use: 'vue-loader' }, // 处理 .vue 文件的 loader
       { test: /\.css$/, use: ['style-loader', 'css-loader'] }, //处理css文件的规则
       { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] }, // 处理 scss 文件的 loader
+      { test: /\.(jpg|png|gif|bmp|jpeg)$/, use: 'url-loader?limit=7631&name=[hash:8]-[name].[ext]' }, // 处理 图片路径的 loader
       { test: /\.(ttf|eot|svg|woff|woff2)$/, use: 'url-loader' }, // 处理 字体文件的 loader
     ]
   },
